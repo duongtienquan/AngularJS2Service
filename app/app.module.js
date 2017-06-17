@@ -10,7 +10,10 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
 var employee_component_1 = require("./employee.component");
+var home_component_1 = require("./home.component");
 var employee_service_1 = require("./services/employee.service");
+var http_1 = require("@angular/http");
+var app_routes_1 = require("./app.routes");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -18,8 +21,8 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, employee_component_1.EmployeeListComponent],
+        imports: [platform_browser_1.BrowserModule, http_1.HttpModule, app_routes_1.appRoutes],
+        declarations: [app_component_1.AppComponent, employee_component_1.EmployeeListComponent, home_component_1.HomeComponent],
         providers: [employee_service_1.EmployeeService],
         bootstrap: [app_component_1.AppComponent]
     })
